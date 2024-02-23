@@ -1,20 +1,23 @@
-import { useEffect, useState } from "react";
+
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import useMenu from "../../../Hooks/Usemenu";
 
 const ChefRecommend = () => {
-  const [menus, setMenus] = useState([]);
+  const[menu]=useMenu()
+    
+  // const [menus, setMenus] = useState([]);
 
-  useEffect(() => {
-    fetch("menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const popularItems = data.filter((item) => item.category === "salad");
-        setMenus(popularItems);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("menu.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const popularItems = data.filter((item) => item.category === "salad");
+  //       setMenus(popularItems);
+  //     });
+  // }, []);
 
   // Slice the menus array to display only the first 3 items
-  const displayedMenus = menus.slice(0, 3);
+  const displayedMenus = menu.slice(0, 3);
 
   return (
     <div>

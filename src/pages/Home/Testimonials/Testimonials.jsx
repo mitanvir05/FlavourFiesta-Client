@@ -1,6 +1,8 @@
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { FaQuoteLeft } from "react-icons/fa6";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -35,6 +37,7 @@ const Testimonials = () => {
                 style={{ maxWidth: 180 }}
                 value={review.rating}
               />
+              <FaQuoteLeft className="text-7xl mx-5 my-5" />
               <p className="py-10">
                 {review.details}
                 <h3 className="text-2xl mx-auto text-center text-orange-500">{review.name}</h3>
