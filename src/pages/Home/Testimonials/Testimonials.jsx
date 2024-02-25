@@ -17,7 +17,7 @@ import '@smastrom/react-rating/style.css'
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("reviews.json")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -38,10 +38,10 @@ const Testimonials = () => {
                 value={review.rating}
               />
               <FaQuoteLeft className="text-7xl mx-5 my-5" />
-              <p className="py-10">
+              <div className="py-10">
                 {review.details}
                 <h3 className="text-2xl mx-auto text-center text-orange-500">{review.name}</h3>
-              </p>
+              </div>
             </div>
           </SwiperSlide>
         ))}
