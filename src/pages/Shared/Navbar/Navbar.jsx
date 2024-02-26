@@ -1,14 +1,18 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { BsFillCartPlusFill } from "react-icons/bs";
+import useCart from "../../../Hooks/useCart";
+
 
 const Navbar = () => {
-  const { user ,logOut} = useContext(AuthContext);
-  const handleLogOut=()=>{
+  const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart()
+  const handleLogOut = () => {
     logOut()
-    .then(()=>{})
-    .catch(error=>console.log(error))
-  }
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   const navOptions = (
     <>
       <li>
@@ -20,11 +24,25 @@ const Navbar = () => {
       <li>
         <Link to="/order/salad">Order Food</Link>
       </li>
+      <li>
+        <Link to="/secret">Secret</Link>
+      </li>
+
+      <li>
+        <Link to="/dashboard/cart">
+          <button className="btn">
+          <BsFillCartPlusFill/>
+            <div className="badge badge-secondary">+{cart.length}</div>
+          </button>
+        </Link>
+      </li>
 
       {user ? (
         <>
-        <button onClick={handleLogOut} className="btn btn-active btn-ghost">LogOut</button>
-        
+          {/* <span>{user.displayName}</span> */}
+          <button onClick={handleLogOut} className="btn btn-active btn-ghost">
+            LogOut
+          </button>
         </>
       ) : (
         <>
