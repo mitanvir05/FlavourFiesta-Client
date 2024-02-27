@@ -1,5 +1,4 @@
 import useCart from "../../../Hooks/useCart";
-import { MdDeleteForever } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
