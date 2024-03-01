@@ -1,5 +1,5 @@
-import { FaCartShopping } from "react-icons/fa6";
-import { FaHome } from "react-icons/fa";
+
+import { FaHome, FaShoppingCart } from "react-icons/fa";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdRateReview } from "react-icons/md";
 import { TbBrandBooking } from "react-icons/tb";
@@ -10,12 +10,12 @@ import { FaListUl } from "react-icons/fa";
 import { FaUsersLine } from "react-icons/fa6";
 import { PiAddressBookFill } from "react-icons/pi";
 
-
-
 import { NavLink, Outlet } from "react-router-dom";
 import UseAdmin from "../Hooks/UseAdmin";
+import useCart from "../Hooks/useCart";
 
 const Dashboard = () => {
+  const [cart] = useCart();
   const [isAdmin] = UseAdmin();
   return (
     <div className="flex">
@@ -24,37 +24,36 @@ const Dashboard = () => {
         <ul className="menu p-4">
           {isAdmin ? (
             <>
-            <li>
-            <NavLink to="/dashboard/adminHome">
-              <FaHome />
-              Admin Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/dashboard/addItems">
-              <ImSpoonKnife />
-              Add Items
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/dashboard/manageItems">
-              <FaListUl />
-              Manage Items
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/dashboard/manageBookings">
-            <PiAddressBookFill />
-            Manage Bookings
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/dashboard/allUsers">
-            <FaUsersLine />
-
-            All Users
-            </NavLink>
-          </li>
+              <li>
+                <NavLink to="/dashboard/adminHome">
+                  <FaHome />
+                  Admin Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/addItems">
+                  <ImSpoonKnife />
+                  Add Items
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/manageItems">
+                  <FaListUl />
+                  Manage Items
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/manageBookings">
+                  <PiAddressBookFill />
+                  Manage Bookings
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/allUsers">
+                  <FaUsersLine />
+                  All Users
+                </NavLink>
+              </li>
             </>
           ) : (
             <>
@@ -72,8 +71,8 @@ const Dashboard = () => {
               </li>
               <li>
                 <NavLink to="/dashboard/cart">
-                  <FaCartShopping />
-                  My Cart
+                  <FaShoppingCart></FaShoppingCart>
+                  My Cart ({cart.length})
                 </NavLink>
               </li>
               <li>
