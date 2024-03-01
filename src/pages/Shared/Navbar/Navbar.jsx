@@ -25,9 +25,16 @@ const Navbar = () => {
       <li>
         <Link to="/order/salad">Order Food</Link>
       </li>
-      <li>
-        <Link to="/secret">Secret</Link>
+      {
+        user && isAdmin && <li>
+        <Link to="/dashboard/adminHome">Dashboard</Link>
       </li>
+      }
+      {
+        user && !isAdmin && <li>
+        <Link to="/dashboard/userHome">Dashboard</Link>
+      </li>
+      }
 
       <li>
         <Link to="/dashboard/cart">
