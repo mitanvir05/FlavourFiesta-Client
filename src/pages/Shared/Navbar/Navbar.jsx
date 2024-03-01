@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import useCart from "../../../Hooks/useCart";
-
+import UseAdmin from "../../../Hooks/UseAdmin";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [cart] = useCart()
+  const [isAdmin] = UseAdmin();
+  const [cart] = useCart();
   const handleLogOut = () => {
     logOut()
       .then(() => {})
@@ -31,7 +32,7 @@ const Navbar = () => {
       <li>
         <Link to="/dashboard/cart">
           <button className="btn">
-          <BsFillCartPlusFill/>
+            <BsFillCartPlusFill />
             <div className="badge badge-secondary">+{cart.length}</div>
           </button>
         </Link>
