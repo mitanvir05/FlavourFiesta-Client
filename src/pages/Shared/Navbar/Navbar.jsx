@@ -25,21 +25,21 @@ const Navbar = () => {
       <li>
         <Link to="/order/salad">Order Food</Link>
       </li>
-      {
-        user && isAdmin && <li>
-        <Link to="/dashboard/adminHome">Dashboard</Link>
-      </li>
-      }
-      {
-        user && !isAdmin && <li>
-        <Link to="/dashboard/userHome">Dashboard</Link>
-      </li>
-      }
+      {user && isAdmin && (
+        <li>
+          <Link to="/dashboard/adminHome">Dashboard</Link>
+        </li>
+      )}
+      {user && !isAdmin && (
+        <li>
+          <Link to="/dashboard/userHome">Dashboard</Link>
+        </li>
+      )}
 
       <li>
         <Link to="/dashboard/cart">
-          <button className="btn">
-            <BsFillCartPlusFill />
+          <button className="btn btn-sm">
+            <BsFillCartPlusFill className="text-sm"/>
             <div className="badge badge-secondary">+{cart.length}</div>
           </button>
         </Link>
@@ -95,7 +95,11 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <div className="avatar">
+            <div className="w-16 ">
+              <img src="https://i.ibb.co/1XWYhNH/Flavour-Fiesta-1.png" />
+            </div>
+          </div>
         </div>
       </div>
     </>

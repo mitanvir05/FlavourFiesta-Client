@@ -1,16 +1,16 @@
+import { Link } from "react-router-dom";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
-import featuredImg from "../../../assets/home/featured.jpg";
 import './Featured.css'
 const Featured = () => {
   return (
-    <div className="featured-item bg-fixed text-white pt-10 my-10">
+    <div className="featured-item bg-fixed text-black pt-10 my-10">
       <SectionTitle
-        subHeading={"Check It Out"}
-        heading={"featured item"}
+        subHeading="Check It Out"
+        heading="featured item"
       ></SectionTitle>
-      <div className="md:flex justify-center bg-slate-500 bg-opacity-45  items-center pb-20 px-36">
+      <div className="md:flex justify-center bg-gray-700 bg-opacity-35  items-center pb-20 px-36">
         <div>
-          <img src={featuredImg} alt="" />
+          <img src='https://i.ibb.co/pZHgsXb/Thanks-Giving-2.png' alt="" />
         </div>
         <div className="md:ml-10">
           <p>Aug 09,2009</p>
@@ -20,7 +20,8 @@ const Featured = () => {
             optio autem omnis quidem distinctio laborum assumenda quia cum
             consequuntur ut.
           </p>
-          <button className="btn btn-outline border-0 border-b-4 mt-4 "> Order Now</button>
+          <Link to='/order/salad'> <button className="btn btn-outline border-0 border-b-4 mt-4 "> Order Now</button></Link>
+         
         </div>
       </div>
     </div>

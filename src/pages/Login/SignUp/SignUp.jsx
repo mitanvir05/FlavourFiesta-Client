@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { TbFidgetSpinner } from "react-icons/tb";
+
 import UseAxiosPublic from "../../../Hooks/UseAxiosPublic";
 
 import SocialLogin from "../../../components/SocialLogin/SocialLogin";
@@ -19,7 +19,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const { createUser, updateUserProfile, loading } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   
 
   const onSubmit = (data) => {
@@ -86,21 +86,7 @@ const SignUp = () => {
                   <span className="text-red-700">Name is required</span>
                 )}
               </div>
-              <div>
-                <label className="label">
-                  <span className="block mb-2 text-sm">Photo URL</span>
-                </label>
-                <input
-                  required
-                  type="text"
-                  {...register("photoURL", { required: true })}
-                  placeholder="Photo URL"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-rose-500 bg-gray-200 text-gray-900"
-                />
-                {errors.photoURL && (
-                  <span className="text-red-700">Photo URL required</span>
-                )}
-              </div>
+             
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm">
                   Email address
@@ -162,12 +148,7 @@ const SignUp = () => {
                 type="submit"
                 value="Sign  Up"
                 className="bg-rose-500 w-full rounded-md py-3 text-white"
-              >
-                {loading ? (
-                  <TbFidgetSpinner className="animate-spin m-auto" />
-                ) : (
-                  "Continue"
-                )}
+              >Signup
               </button>
             </div>
           </form>

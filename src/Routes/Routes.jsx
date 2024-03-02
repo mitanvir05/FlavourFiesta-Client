@@ -18,6 +18,10 @@ import Payment from "../pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/PaymentHsitory/PaymentHistory";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import Reservation from "../pages/Dashboard/Reservation/Reservation";
+import Contact from "../pages/Dashboard/Contact/Contact";
+import AddReview from "../pages/Dashboard/AddReview/AddReview";
+import ManageBookings from "../pages/Dashboard/ManageBookings/ManageBookings";
 
 export const router = createBrowserRouter([
   {
@@ -61,6 +65,10 @@ export const router = createBrowserRouter([
       //normal user routes
 
     {
+      path:"reservation",
+      element:<Reservation></Reservation>
+    },
+    {
       path:"UserHome",
       element:<UserHome></UserHome>,
     },
@@ -73,8 +81,16 @@ export const router = createBrowserRouter([
       element:<Payment></Payment>
     },
     {
+      path:'review',
+      element:<AddReview></AddReview>
+    },
+    {
       path:'paymentHistory',
       element:<PaymentHistory></PaymentHistory>
+    },
+    {
+      path:'contact',
+      element:<Contact></Contact>
     },
     //admin route only
     {
@@ -90,6 +106,10 @@ export const router = createBrowserRouter([
     {
       path:"manageItems",
       element:<AdminRoute><ManageItems></ManageItems></AdminRoute>
+    },
+    {
+      path:"manageBookings",
+      element:<AdminRoute><ManageBookings></ManageBookings></AdminRoute>
     },
     {
       path: 'updateItem/:id',

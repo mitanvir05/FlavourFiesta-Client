@@ -1,10 +1,10 @@
-
+import { Link } from "react-router-dom";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useMenu from "../../../Hooks/Usemenu";
 
 const ChefRecommend = () => {
-  const[menu]=useMenu()
-    
+  const [menu] = useMenu();
+
   // const [menus, setMenus] = useState([]);
 
   // useEffect(() => {
@@ -25,7 +25,7 @@ const ChefRecommend = () => {
         subHeading={"Should Try"}
         heading={"Chef Recommend"}
       ></SectionTitle>
-      
+
       <div className="grid md:grid-cols-3 ">
         {displayedMenus.map((menu) => (
           <div key={menu._id}>
@@ -36,13 +36,15 @@ const ChefRecommend = () => {
               <div className="card-body items-center text-center">
                 <h2 className="card-title">{menu.name}</h2>
                 <p>{menu.recipe}</p>
-                <div className="card-actions">
-                <button className="btn btn-outline border-0 border-b-4 mt-4 d-block mx-auto uppercase"> Add To Cart</button>
-                </div>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className="text-center">
+        <Link to='/order/salad'><button className="btn btn-outline border-0 border-b-4 mt-2 d-block mx-auto uppercase">
+          Order now
+        </button></Link>
       </div>
     </div>
   );

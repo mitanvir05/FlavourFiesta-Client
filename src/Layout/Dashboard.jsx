@@ -20,7 +20,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       {/* dashboard sidebar */}
-      <div className="w-64 min-h-screen bg-orange-500">
+      <div className="w-64 min-h-screen bg-lime-200">
         <ul className="menu p-4">
           {isAdmin ? (
             <>
@@ -104,7 +104,7 @@ const Dashboard = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/order/contact">
+            <NavLink to="/dashboard/contact">
               <MdOutlineMail />
               Contact
             </NavLink>
