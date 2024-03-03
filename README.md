@@ -28,7 +28,7 @@ A Flavour Fiesta, a sophisticated online platform, redefines the dining experien
 ## Tech Stack
 
 - React
-- MoongoDb
+- MongoDb
 - Firebase
 - Axios
 - Tanstack Query
