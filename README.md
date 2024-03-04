@@ -1,7 +1,7 @@
 # Live Link
 ## https://flavourfiesta-a3f98.web.app/
 
-# Flavour Fiesta - Savor Culinary Excellence
+# Flavour Fiesta -Your Tasty Online Restaurant.
 
 A Flavour Fiesta, a sophisticated online platform, redefines the dining experience for connoisseurs by bringing a rich tapestry of flavors to their fingertips. Designed exclusively for a restaurant setting, this website seamlessly blends user-friendly features, secure authentication through Firebase, and efficient data management via MongoDB. Explore the culinary journey as an administrator or a patron, ensuring a delightful experience for everyone.
 
