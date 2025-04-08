@@ -42,39 +42,37 @@ A Flavour Fiesta, a sophisticated online platform, redefines the dining experien
 
 
 
-## Screenshots
-- Admin Dashboard
+# Screenshots
+## Homepage
 
-![App Screenshot](https://i.ibb.co/TMSYWbS/admin-dashboard.png)
+![App Screenshot](/src/assets/appimg/1.png)
 
-![App Screenshot](https://i.ibb.co/DKNvdNs/admin-manage-item.png)
+![App Screenshot](/src/assets/appimg/2.png)
 
-![App Screenshot](https://i.ibb.co/G3Fvvss/all-users.png)
+![App Screenshot](/src/assets/appimg/3.png)
+
+![App Screenshot](/src/assets/appimg/4.png)
+
+## Admin Dashboard
+
+![App Screenshot](/src/assets/appimg/5.png)
+![App Screenshot](/src/assets/appimg/6.png)
+![App Screenshot](/src/assets/appimg/7.png)
 
 
-- User Dashboard
 
-![App Screenshot](https://i.ibb.co/5cP6j5h/user-dash.png)
 
-![App Screenshot](https://i.ibb.co/M9hn0nD/user-payment.png)
+## User Dashboard
 
-![App Screenshot](https://i.ibb.co/x5DWD9y/user-pay-his.png)
+![App Screenshot](/src/assets/appimg/8.png)
+![App Screenshot](/src/assets/appimg/9.png)
+![App Screenshot](/src/assets/appimg/10.png)
 
-- Homepage
 
-![App Screenshot](https://i.ibb.co/th3Jqkv/1.png)
 
-![App Screenshot](https://i.ibb.co/8j9XJpM/2.png)
+## Menu
 
-![App Screenshot](https://i.ibb.co/HN6drY2/3.png)
-
-![App Screenshot](https://i.ibb.co/jwLntRB/4.png)
-
-- Menu
-
-![App Screenshot](https://i.ibb.co/3CHPR8R/5-salad.png)
-
-![App Screenshot](https://i.ibb.co/xztPKSz/6-pizza.png)
-
-![App Screenshot](https://i.ibb.co/1RWVpmd/7-drinks.png)
+![App Screenshot](/src/assets/appimg/11.png)
+![App Screenshot](/src/assets/appimg/12.png)
+![App Screenshot](/src/assets/appimg/13.png)
 
